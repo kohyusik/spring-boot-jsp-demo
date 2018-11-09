@@ -15,6 +15,11 @@ public class WelcomeController {
 	private String message = "Hello World";
 
 	@GetMapping("/")
+	public String login() {
+		return "login";
+	}
+
+	@GetMapping("/all")
 	public String welcome(Map<String, Object> model) {
 		model.put("time", new Date());
 		model.put("message", this.message);
@@ -36,5 +41,19 @@ public class WelcomeController {
 	public @ResponseBody MyRestResponse handleMyRuntimeException(MyException exception) {
 		return new MyRestResponse("Some data I want to send back to the client.");
 	}
-
+	
+	@GetMapping("/admin")
+	public String admin() {
+		return "admin";
+	}
+	
+	@GetMapping("/user")
+	public String user() {
+		return "user";
+	}
+	
+	@GetMapping("/ping")
+	public @ResponseBody String ping() {
+		return new Date().toString();
+	}
 }

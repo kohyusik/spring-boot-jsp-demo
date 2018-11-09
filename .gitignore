@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/macos,gradle,windows,eclipse,netbeans,intellij+all
 # Edit at https://www.gitignore.io/?templates=macos,gradle,windows,eclipse,netbeans,intellij+all
 
+# QueryDSL
+src/main/generated/
+
 ### Eclipse ###
 
 .metadata
