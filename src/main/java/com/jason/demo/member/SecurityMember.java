@@ -19,7 +19,6 @@ public class SecurityMember extends User {
     
     private static List<GrantedAuthority> makeGrantedAuthority(Set<Roles> roles){
     
-        System.out.println("!!!!!!!@%!@#%");
 		List<GrantedAuthority> list = new ArrayList<>();
 		roles.forEach(role -> list.add(new SimpleGrantedAuthority(ROLE_PREFIX + role.getRoleName())));
 		return list;

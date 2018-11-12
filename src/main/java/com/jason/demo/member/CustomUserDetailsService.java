@@ -20,7 +20,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         
-        System.out.println("############# : " + username);
+        System.out.println("############# login user : " + username);
+
 		return
                 Optional.ofNullable(memberRepository.findByName(username))
                         .filter(member -> member != null)
@@ -28,4 +29,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 //                        .filter(member -> member != null)
 //                        .map(member -> new SecurityMember(member)).get();
 	}
+
+
 }

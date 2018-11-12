@@ -23,7 +23,8 @@ public class WelcomeController {
     
     @GetMapping({ "/login" })
     public String login(HttpServletRequest req) {
-        
+
+        System.out.println(">>>>>>>>>> : /login");
         String referer = req.getHeader("Referer");
         req.getSession().setAttribute("prevPage", referer);
         return "login";
