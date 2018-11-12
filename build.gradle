@@ -18,20 +18,27 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.jason'
 version = '0.0.1-SNAPSHOT'
 
-//compileJava {
+compileJava {
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
-//    options.encoding = 'UTF-8'
-//}
+    options.encoding = 'UTF-8'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+
+//    provided group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+
 //    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    runtimeOnly('com.h2database:h2')
+//    runtimeOnly('com.h2database:h2')
+    // jdbc
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('mysql:mysql-connector-java')
 
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
@@ -52,9 +59,6 @@ dependencies {
 //    compile("com.querydsl:querydsl-apt:$querydslVersion")
 //    compile("com.querydsl:querydsl-jpa:$querydslVersion")
 }
-
-
-
 
 sourceSets {
     generated {
