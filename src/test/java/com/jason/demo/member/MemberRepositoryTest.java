@@ -8,9 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -21,6 +19,25 @@ public class MemberRepositoryTest {
     MemberRepository memberRepository;
     @Autowired
     RolesRepository  rolesRepository;
+    
+    @Test
+    public void test() {
+    
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.add("4");
+    
+        list.stream()
+                .filter(String::isEmpty)
+                .forEach(System.out::println);
+        System.out.println(">>>>>>>>>>>>>>>>>>>");
+        
+        String test = String.join("2','3", "A", "B", "C");
+        System.out.println(test);
+    }
+    
     
     @Test
     public void lombokTest() {

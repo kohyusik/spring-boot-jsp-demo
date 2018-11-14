@@ -21,11 +21,13 @@ public class CustomUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         
         System.out.println("############# login user : " + username);
-
+		
+		System.out.println(memberRepository.findByName(username));
+		
 		return
                 Optional.ofNullable(memberRepository.findByName(username))
                         .filter(member -> member != null)
-                        .map(member -> new SecurityMember(member)).get();
+                        .map(SecurityMember::new).get();
 //                        .filter(member -> member != null)
 //                        .map(member -> new SecurityMember(member)).get();
 	}

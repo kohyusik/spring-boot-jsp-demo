@@ -17,7 +17,7 @@ public class WelcomeController {
     
     @GetMapping({ "/" })
     public String index() {
-        return "user";
+        return "index";
     }
     
     
