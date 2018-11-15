@@ -60,7 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
-                .antMatchers("/user/**", "/api/**").hasRole("USER")
+                .antMatchers("/user/**", "/api/**").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/**").permitAll()
 
                 .and()
