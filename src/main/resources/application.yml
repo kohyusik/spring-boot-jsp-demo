@@ -8,8 +8,9 @@ spring:
       suffix: .jsp
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/web?serverTimezone=Asia/Seoul
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://ec2-13-125-38-65.ap-northeast-2.compute.amazonaws.com:3306/web
+#    url: jdbc:mysql://localhost:3306/web?serverTimezone=Asia/Seoul
     username: jason
     password: qwe123
   #  h2:
