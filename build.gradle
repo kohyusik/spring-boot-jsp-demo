@@ -59,6 +59,10 @@ dependencies {
 //    compile("com.querydsl:querydsl-core:$querydslVersion")
 //    compile("com.querydsl:querydsl-apt:$querydslVersion")
 //    compile("com.querydsl:querydsl-jpa:$querydslVersion")
+
+    // mybatis
+    compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.3.2'
+
 }
 
 sourceSets {
