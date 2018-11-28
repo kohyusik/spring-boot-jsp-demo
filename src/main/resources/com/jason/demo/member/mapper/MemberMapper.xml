@@ -4,6 +4,10 @@
 <mapper namespace="com.jason.demo.member.mapper.MemberMapper">
 
     <select id="selectNow" resultType="String">
+        select now()
+    </select>
+
+    <select id="selectMember1" resultType="String">
         select name from member limit 1
     </select>
 

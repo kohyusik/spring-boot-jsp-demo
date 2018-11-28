@@ -24,4 +24,8 @@ public class MemberService {
     public String selectNow() {
         return memberMapper.selectNow();
     }
+    
+    public String selectMember1() {
+        return memberMapper.selectMember1();
+    }
 }

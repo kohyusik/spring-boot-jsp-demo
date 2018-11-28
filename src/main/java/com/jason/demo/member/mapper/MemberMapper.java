@@ -13,4 +13,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MemberMapper {
     
     String selectNow();
+    String selectMember1();
 }

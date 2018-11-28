@@ -24,12 +24,18 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @GetMapping(path = { "/test" })
+    @GetMapping(path = { "/now" })
     @ResponseBody
     public String members() {
 
         return memberService.selectNow();
+    }
 
+    @GetMapping(path = { "/member1" })
+    @ResponseBody
+    public String members1() {
+
+        return memberService.selectMember1();
     }
 
 }
