@@ -11,7 +11,7 @@ import java.util.Optional;
 public class CustomUserDetailsService implements UserDetailsService {
 	
 	private MemberRepository memberRepository;
-	
+
 	public CustomUserDetailsService(MemberRepository memberRepository) {
 		
 		this.memberRepository = memberRepository;
@@ -19,7 +19,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        
+
         System.out.println("############# login user : " + username);
 		
 		System.out.println(memberRepository.findByName(username));

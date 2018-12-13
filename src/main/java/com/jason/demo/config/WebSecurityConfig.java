@@ -93,10 +93,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //    }
 
 
-@Bean
-public AuthenticationSuccessHandler successHandler() {
-    return new CustomLoginSuccessHandler("/ping");
-}
+    @Bean
+    public AuthenticationSuccessHandler successHandler() {
+        return new CustomLoginSuccessHandler("/ping");
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
